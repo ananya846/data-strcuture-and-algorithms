@@ -86,6 +86,8 @@ else
     struct node *temp=front;
     printf("deleted element=%d",temp->data);
     front=front->next;
+    if(front==NULL)
+    {rear=NULL;}
     free(temp);
 }
 }

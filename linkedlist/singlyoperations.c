@@ -68,6 +68,12 @@ void insert_pos(int value,int pos)
                 temp2=temp1;
                 temp1=temp1->next;
             }
+         if (c <= pos-1)
+        {
+            printf("Cannot insert at position %d\n", pos);
+            free(newnode);
+            return;
+        }
             temp2->next=newnode;
             newnode->next=temp1;
         }
